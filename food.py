@@ -72,7 +72,7 @@ if st.button('Get prediction about your dish'):
         with col11:
          st.image(new_image)
     else:
-        urllib.request.urlretrieve('https://media.geeksforgeeks.org/wp-content/uploads/20210318103632/gfg-300x300.png', "thumbs down.png")
+        urllib.request.urlretrieve('blob:https://pixlr.com/eca30ff8-cf5a-40bb-a885-61c2f1dec222', "thumbs down.png")
         image = Image.open("thumbs down.png")
         new_image = image.resize((70, 70))
         col12, mid, col13 = st.columns([45, 1, 20])
