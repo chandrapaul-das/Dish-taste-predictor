@@ -62,7 +62,7 @@ if st.button('Get prediction about your dish'):
       'calories': [calories], 'fat': [fat], 'carbs': [carbs], 'protine': [protine],'rating': [rating]})
     result = pipe.predict(input_df)
     if result==1:
-        image = Image.open("C:/Users/chand/Downloads/thumbs up.png")
+        image = Image.open("https://github.com/chandrapaul-das/Dish-taste-predictor/blob/main/thumbs%20up.png?raw=true")
         new_image = image.resize((70, 70))
         col10, mid, col11 = st.columns([35,1,20])
         with col10:
