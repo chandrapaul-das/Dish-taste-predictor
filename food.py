@@ -63,7 +63,7 @@ if st.button('Get prediction about your dish'):
       'calories': [calories], 'fat': [fat], 'carbs': [carbs], 'protine': [protine],'rating': [rating]})
     result = pipe.predict(input_df)
     if result==1:
-        urllib.request.urlretrieve('https://drive.google.com/file/d/1By17YHP_eS9gmomqUjSFRumOAQw9wiEM/view?usp=share_link', "thumbs up.png")
+        urllib.request.urlretrieve('https://i.imgur.com/erFZhDi.png', "thumbs up.png")
         image = Image.open("thumbs up.png")
         new_image = image.resize((70, 70))
         col10, mid, col11 = st.columns([35,1,20])
@@ -72,7 +72,7 @@ if st.button('Get prediction about your dish'):
         with col11:
          st.image(new_image)
     else:
-        urllib.request.urlretrieve('blob:https://pixlr.com/eca30ff8-cf5a-40bb-a885-61c2f1dec222', "thumbs down.png")
+        urllib.request.urlretrieve('https://i.imgur.com/q3R8Dpv.png', "thumbs down.png")
         image = Image.open("thumbs down.png")
         new_image = image.resize((70, 70))
         col12, mid, col13 = st.columns([45, 1, 20])
