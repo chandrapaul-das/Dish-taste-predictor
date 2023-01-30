@@ -70,7 +70,7 @@ if st.button('Get prediction about your dish'):
         with col11:
          st.image(new_image)
     else:
-        image = Image.open("C:/Users/chand/Downloads/thumbs down.png")
+        image = Image.open("https://github.com/chandrapaul-das/Dish-taste-predictor/blob/main/thumbs%20down.png?raw=true")
         new_image = image.resize((70, 70))
         col12, mid, col13 = st.columns([45, 1, 20])
         with col12:
