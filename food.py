@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 from PIL import Image
+import urllib.request
 
 pipe = pickle.load(open('food.pkl', 'rb'))
 
@@ -62,7 +63,8 @@ if st.button('Get prediction about your dish'):
       'calories': [calories], 'fat': [fat], 'carbs': [carbs], 'protine': [protine],'rating': [rating]})
     result = pipe.predict(input_df)
     if result==1:
-        image = Image.open("https://github.com/chandrapaul-das/Dish-taste-predictor/blob/main/thumbs%20up.png?raw=true")
+        urllib.request.urlretrieve('https://media.geeksforgeeks.org/wp-content/uploads/20210318103632/gfg-300x300.png', "gfg.png")
+        image = Image.open("gfg.png")
         new_image = image.resize((70, 70))
         col10, mid, col11 = st.columns([35,1,20])
         with col10:
@@ -70,7 +72,8 @@ if st.button('Get prediction about your dish'):
         with col11:
          st.image(new_image)
     else:
-        image = Image.open("https://github.com/chandrapaul-das/Dish-taste-predictor/blob/main/thumbs%20down.png?raw=true")
+        urllib.request.urlretrieve('https://media.geeksforgeeks.org/wp-content/uploads/20210318103632/gfg-300x300.png', "gfg.png")
+        image = Image.open("gfg.png")
         new_image = image.resize((70, 70))
         col12, mid, col13 = st.columns([45, 1, 20])
         with col12:
